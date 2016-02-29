@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Channel from './Channel.jsx'
+import Channel from './Channel.jsx';
 
 class ChannelList extends Component{
   render(){
