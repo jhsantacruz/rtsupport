@@ -19732,12 +19732,6 @@
 	  return App;
 	})(_react.Component);
 
-	Channel.propTypes = {
-	  channels: _react2['default'].PropTypes.array.isRequired,
-	  setChannel: _react2['default'].PropTypes.func.isRequired,
-	  addChannel: _react2['default'].PropTypes.func.isRequired
-	};
-
 	exports['default'] = App;
 	module.exports = exports['default'];
 
@@ -19797,7 +19791,7 @@
 	  return ChannelSection;
 	})(_react.Component);
 
-	Channel.propTypes = {
+	ChannelSection.propTypes = {
 	  channels: _react2['default'].PropTypes.array.isRequired,
 	  setChannel: _react2['default'].PropTypes.func.isRequired,
 	  addChannel: _react2['default'].PropTypes.func.isRequired
@@ -19865,8 +19859,8 @@
 	  return ChannelForm;
 	})(_react.Component);
 
-	Channel.propTypes = {
-	  channels: _react2['default'].PropTypes.func.isRequired
+	ChannelForm.propTypes = {
+	  addChannel: _react2['default'].PropTypes.func.isRequired
 	};
 
 	exports['default'] = ChannelForm;
@@ -19930,7 +19924,7 @@
 	  return ChannelList;
 	})(_react.Component);
 
-	_ChannelJsx2['default'].propTypes = {
+	ChannelList.propTypes = {
 	  channels: _react2['default'].PropTypes.array.isRequired,
 	  setChannel: _react2['default'].PropTypes.func.isRequired
 	};
