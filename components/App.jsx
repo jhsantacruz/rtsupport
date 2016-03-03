@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ChannelSection from './channels/ChannelSection.jsx';
+import UserSection from './users/UserSection.jsx';
 
 class App extends Component{
   constructor(props){

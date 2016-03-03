@@ -4,7 +4,7 @@ class UserForm extends Component{
   onSubmit(e){
     e.preventDefault();
     const node = this.refs.userName;
-    const channelName = node.value;
+    const userName = node.value;
     this.props.setUserName(userName);
     node.value = ''
   }
