@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import fecha from 'fecha';
+// import fecha from 'fecha';
 
 class Message extends Component{
   render(){
     let {message} = this.props;
-    let createdAt = fecha.format(new Date(message.createdAt), 'HH:mm:ss MM/DD/YY');
+    // let createdAt = fecha.format(new Date(message.createdAt), 'HH:mm:ss MM/DD/YY');
+    let createdAt = ''
     return (
       <li className='message'>
         <div className='author'>
