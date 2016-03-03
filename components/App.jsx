@@ -19,12 +19,16 @@ class App extends Component{
     // TODO: Get Channels Messages
   }
   render(){
-    return(
-      <ChannelSection
-        channels = {this.state.channels}
-        addChannel = {this.addChannel.bind(this)}
-        setChannel = {this.setChannel.bind(this)}
-      />
+    return (
+      <div className='app'>
+        <div className='nav'>
+          <ChannelSection
+            {...this.state}
+            addChannel={this.addChannel.bind(this)}
+            setChannel={this.setChannel.bind(this)}
+          />
+        </div>
+      </div>
     )
   }
 }
