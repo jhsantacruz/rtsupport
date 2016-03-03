@@ -5,7 +5,8 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      channels: []
+      channels: [],
+      users: []
     };
   }
   addChannel(name){
@@ -18,6 +19,12 @@ class App extends Component{
     this.setState({activeChannel});
     // TODO: Get Channels Messages
   }
+  setUserName(name){
+    let {user} = this.state;
+    users.push({id: users.length, name});
+    this.setState({users});
+    // TODO: Send to server
+  }
   render(){
     return (
       <div className='app'>
@@ -26,6 +33,10 @@ class App extends Component{
             {...this.state}
             addChannel={this.addChannel.bind(this)}
             setChannel={this.setChannel.bind(this)}
+          />
+          <UserSection
+            {...this.state}
+            setUserName={this.setUserName.bind(this)}
           />
         </div>
       </div>
