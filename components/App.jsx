@@ -21,7 +21,8 @@ class App extends Component{
     // TODO: Get Channels Messages
   }
   setUserName(name){
-    let {user} = this.state;
+    let {users} = this.state;
+    console.log('Users = ', users)
     users.push({id: users.length, name});
     this.setState({users});
     // TODO: Send to server

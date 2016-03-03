@@ -11,7 +11,7 @@ class User extends Component{
 }
 
 User.propTypes = {
-  User: React.PropTypes.object.isRequired
+  user: React.PropTypes.object.isRequired
 }
 
 export default User

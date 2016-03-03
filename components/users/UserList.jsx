@@ -6,9 +6,10 @@ class UserList extends Component{
     return(
       <ul>{
         this.props.users.map( user => {
-          return (<User
-            key={chan.id}
-            user={user}
+          return (
+            <User
+              key={user.id}
+              user={user}
           />)
         })
       }</ul>
