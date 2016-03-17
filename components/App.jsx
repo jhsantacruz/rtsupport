@@ -31,8 +31,10 @@ class App extends Component{
     // TODO: Send to server
   }
   addMessage(body){
-    let {messages} = this.state;
-    messages.push({id: messages.length, body});
+    let {messages, users} = this.state;
+    let createdAt = new Date;
+    let author = users.length > 0 ? users[0].name : 'Anonymous';
+    messages.push({id: messages.length, body, createdAt, author});
     this.setState({messages});
     // TODO: Send to server
   }
