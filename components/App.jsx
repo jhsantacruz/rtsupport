@@ -22,6 +22,12 @@ class App extends Component{
     socket.on('channel add', this.onAddChannel.bind(this));
     socket.on('user add', this.onAddUser.bind(this));
     socket.on('user remove', this.onRemoveUser.bind(this));
+    socket.on('message add', this.onMessageAdd.bind(this));
+  }
+  onMessageAdd(message){
+    let {messages} = this.state;
+    messages.push(message);
+    this.setState({messages});
   }
   onRemoveUser(removeUser){
     let {users} = this.state;
@@ -67,12 +73,9 @@ class App extends Component{
     this.socket.emit('user edit', {name});
   }
   addMessage(body){
-    let {messages, users} = this.state;
-    let createdAt = new Date;
-    let author = users.length > 0 ? users[0].name : 'Anonymous';
-    messages.push({id: messages.length, body, createdAt, author});
-    this.setState({messages});
-    // TODO: Send to server
+    let {activeChannel} = this.state;
+    this.socket.emit('message add',
+      {channelId: activeChannel.id, body});
   }
   render(){
     return (
