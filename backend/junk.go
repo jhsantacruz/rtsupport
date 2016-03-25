@@ -10,15 +10,15 @@ import (
 // Message is an exported type that
 // contains the json instance
 type Message struct {
-	Name string
-	Data interface{}
+	Name string      `json:"name"`
+	Data interface{} `json:"data"`
 }
 
 // Channel is exported type that
 // contains the json instance for a Channel
 type Channel struct {
-	ID   string
-	Name string
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }
 
 func main() {
