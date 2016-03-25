@@ -1,5 +1,8 @@
 package main
 
+//
+// THROWAWAY CODE
+//
 import (
 	"encoding/json"
 	"fmt"
